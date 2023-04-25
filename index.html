@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <!--  <script src="script.js"></script>-->
+  <script src="IP_tracker.js"></script>
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>IP Address Tracker</h1>
+    <div class="ipForm">
+      <label for="ipAddress">Ip address</label>
+      <input type="text" name="ipAddressInput" id="ipAddress" placeholder="Search for any IP address or domain">
+      <button><img src="images/icon-arrow.svg" alt="arrow icon"></button>
+    </div>
+    <div class="boxInformation">
+      <div class="result">
+        <label class="labelInformation">IP Address</label>
+        <label id="ipShow" class="resultInformation"></label>
+      </div>
+      <span class="separator"></span>
+      <div class="result">
+        <label class="labelInformation">Location</label>
+        <label id="locationShow" class="resultInformation"></label>
+      </div>
+      <span class="separator"></span>
+      <div class="result">
+        <label class="labelInformation">Timezone</label>
+        <label id="timezoneShow" class="resultInformation"></label>
+      </div>
+      <span class="separator"></span>
+      <div class="result">
+        <label class="labelInformation">ISP</label>
+        <label id="ispShow" class="resultInformation"></label>
+      </div>
+    </div>
+  </header>
+  <div class="mapsViewer" id="map"></div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">GEORGES Cédric</a>.
+  </div>
+</body>
+</html>

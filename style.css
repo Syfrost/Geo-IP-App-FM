@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+    justify-content: center;
+    font-family: 'Rubik', sans-serif;
+}
+header {
+    height: 30%;
+    min-height: 200px;
+    background-image: url("images/pattern-bg-mobile.png");
+    background-size: cover;
+}
+header h1 {
+    text-align: center;
+    color: white;
+}
+.ipForm {
+    display: flex;
+    align-items: stretch;
+    width: 85%;
+    max-width: 350px;
+    height: 55px;
+    margin: auto;
+
+}
+.ipForm input {
+    width: 100%;
+    border-radius: 15px 0 0 15px;
+    border: none;
+    padding-left: 22px;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+}
+.ipForm input::placeholder {
+    font-size: 13px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+.ipForm button {
+    width: 55px;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    background-color: black;
+}
+.boxInformation {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: stretch;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    margin-top: 25px;
+    padding-top: 21px;
+    max-width: 350px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px 15px 15px 15px;
+    z-index: 2;
+}
+.result {
+    display: block;
+    text-align: center;
+}
+.labelInformation {
+    display: block;
+    color: hsl(0, 1%, 50%);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+.resultInformation {
+    display: block;
+    margin-top: 7px;
+    margin-bottom: 21px;
+    font-weight: 700;
+}
+.mapsViewer {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height:auto;
+}
+.ipForm label {
+    display: none;
+}
+@media (min-width: 765px) {
+    header {
+        height: 250px;
+        background-image: url("images/pattern-bg-desktop.png");
+        background-size: cover;
+    }
+    .ipForm {
+        max-width: 500px;
+    }
+    .ipForm input::placeholder {
+        font-size: 20px;
+    }
+    .boxInformation {
+        display: flex;
+        flex-direction: row;
+        max-width: none;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, calc(-50% - 38px));
+    }
+    .result {
+        display: block;
+        flex-direction: column;
+        width: 25%;
+        border-right: black 1px;
+        margin-bottom: 21px;
+    }
+    .labelInformation {
+        text-align: center;
+    }
+    .resultInformation {
+        text-align: center;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .resultInformation:not(:empty) {
+        margin-top: 10px;
+    }
+    .result:nth-child(-n+5) {
+        border-right: 1px solid rgba(187, 183, 183, 0.53);
+    }
+}
